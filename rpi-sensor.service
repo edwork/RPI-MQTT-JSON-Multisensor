@@ -1,0 +1,16 @@
+# Systemd Service Config
+[Unit]
+Description=RPI-Sensor
+After=network.target
+
+[Service]
+Type=simple
+User=pi
+WorkingDirectory=/home/pi/RPI-MQTT-JSON-Multisensor/multisensor.py
+ExecStart=/usr/bin/python multisensor.py
+Restart=on-failure
+RestartSec=10
+KillMode=process
+
+[Install]
+WantedBy=multi-user.target
