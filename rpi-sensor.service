@@ -6,7 +6,9 @@ After=network.target
 [Service]
 Type=simple
 User=pi
-WorkingDirectory=/home/pi/RPI-MQTT-JSON-Multisensor/multisensor.py
+### Replace with wherever you cloned the repo
+WorkingDirectory=/home/pi/RPI-MQTT-JSON-Multisensor/
+### Run 'which python' and replace /usr/bin/python if necessary
 ExecStart=/usr/bin/python multisensor.py
 Restart=on-failure
 RestartSec=10

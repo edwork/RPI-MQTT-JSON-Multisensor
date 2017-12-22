@@ -27,7 +27,6 @@ MQTT_PASSWORD = 'lamepass'
 MQTT_CLIENT_ID = 'pi-sensor-1'
 MQTT_TOPIC_PREFIX = 'hass/pisensornode'
 ## Sensor Information
-TEMP_SENSOR_TYPE = 'DHT11'
 TEMP_SENSOR_PIN = 17 ## GPIO PIN
 MOTION_SENSOR_PIN = 4 ## GPIO PIN
 
@@ -41,7 +40,7 @@ auth_info = {
 }
 try:
     while True:
-        humidity,temperature = dht.read_retry(dht.DHT11,
+        humidity,temperature = dht.read_retry(dht.DHT22,
                                               TEMP_SENSOR_PIN
                                               )
         humidity = round(humidity, 3) ## Round to 3 places
