@@ -33,7 +33,6 @@ MOTION_SENSOR_PIN = 4 ## GPIO PIN
 ## Setup
 sensor_data = {}
 pir = MotionSensor(MOTION_SENSOR_PIN)
-dht_sensor = ('dht.' + TEMP_SENSOR_TYPE)
 auth_info = {
   'username':MQTT_USER,
   'password':MQTT_PASSWORD
